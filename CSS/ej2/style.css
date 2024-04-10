@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: lightblue;
+    color: rgb(8, 8, 8);
+}
+.cuadrado {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+.cuadrado.red {
+    background-color: red;
+}
+.cuadrado.green {
+    background-color: green;
+}
+.cuadrado.blue {
+    background-color: blue;
+}
+.cuadrado.yellow {
+    background-color: yellow;
+}
+.cuadrado.purple {
+    background-color: purple;
+}
+.borde-rectangular {
+    border: 2px solid black;
+}
+.redondos {
+    border-radius: 50%;
+}
+
+tr:nth-child(odd) {
+    background-color: #cec5c5;
+}
+tr:nth-child(even) {
+    background-color: #f0c4c4;
+}
