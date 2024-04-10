@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+        </div>
+        
+        <div>
+            <label for="direccion">Dirección:</label>
+        </div>
+
+        <div>
+            <label for="tipoVia">Tipo de vía:</label>
+            <input type="text" id="tipoVia" name="tipoVia" required>
+        </div>
+    
+        <div>
+            <label for="nombreVia">Nombre de la vía:</label>
+            <input type="text" id="nombreVia" name="nombreVia" required>
+        </div>
+    
+        <div>
+            <label for="codigoPostal">Código Postal:</label>
+            <input type="text" id="codigoPostal" name="codigoPostal" required>
+        </div>
+    
+        <div>
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+        </div>
+    
+        <div>
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="provincia" required>
+        </div>
+    
+        <div>
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" required>
+        </div>
+        
+        <div>
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+        </div>
+    
+        <div>
+            <label for="notaMedia">Nota media en la universidad:</label>
+            <input type="number" id="notaMedia" name="notaMedia" required>
+        </div>
+        
+        <div>
+            <label for="telefono">Número de teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </div>
+    
+        <div>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+        </div>
+    
+        <div>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+        </div>
+    
+        <div>
+            <label for="repetirContrasena">Repetir contraseña:</label>
+            <input type="password" id="repetirContrasena" name="repetirContrasena" required>
+        </div>
+        
+        <div>
+            <label for="pais">Seleccionar país:</label>
+            <select id="pais" name="pais">
+                <option value="España">España</option>
+                <option value="Francia">Francia</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Andorra">Andorra</option>
+            </select>
+        </div>
+    
+        <div>
+            <label for="tipoCuenta">Tipo de cuenta:</label>
+            <select id="tipoCuenta" name="tipoCuenta" onchange="
+                let descripcion = document.getElementById('descripcion');
+                let descripcionGratuita = document.getElementById('descripcionGratuita');
+                let descripcionBasica = document.getElementById('descripcionBasica');
+                let descripcionPremium = document.getElementById('descripcionPremium');
+
+                descripcion.style.display = 'block'; // Muestra el contenedor de descripciones
+
+                if (this.value === 'Gratuita') {
+                    descripcionGratuita.style.display = 'block';
+                    descripcionBasica.style.display = 'none';
+                    descripcionPremium.style.display = 'none';
+                } else if (this.value === 'Basica') {
+                    descripcionGratuita.style.display = 'none';
+                    descripcionBasica.style.display = 'block';
+                    descripcionPremium.style.display = 'none';
+                } else if (this.value === 'Premium') {
+                    descripcionGratuita.style.display = 'none';
+                    descripcionBasica.style.display = 'none';
+                    descripcionPremium.style.display = 'block';
+                } else {
+                    descripcion.style.display = 'none'; // Oculta el contenedor de descripciones si no se selecciona ninguna opción
+                }
+            ">
+                <option value="">Seleccione una opción</option>
+                <option value="Gratuita">Gratuita</option>
+                <option value="Basica">Básica</option>
+                <option value="Premium">Premium</option>
+            </select>
+        </div>
+
+            <div id="descripcion" style="display: none;">
+                <p id="descripcionGratuita" style="display: none;">Descripción de la cuenta Gratuita.</p>
+                <p id="descripcionBasica" style="display: none;">Descripción de la cuenta Básica.</p>
+                <p id="descripcionPremium" style="display: none;">Descripción de la cuenta Premium.</p>
+            </div>
+    
+        <div>
+            <label for="sobreMi">Sobre mí:</label>
+            <textarea id="sobreMi" name="sobreMi"></textarea>
+        </div>
+        
+        <div>
+            <label for="fotoPerfil">Foto de perfil:</label>
+            <input type="file" id="fotoPerfil" name="fotoPerfil" accept="image/*">
+        </div>
+    
+        <div>
+            <label for="cv">Permitir subir CV:</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+        </div>
+    
+        <input type="submit" value="Registrar">
+    </form>
+    
+</body>
+</html>
