@@ -1,0 +1,152 @@
+/* Estilos para la tabla del Ejercicio 2 */
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: lightblue;
+    color: rgb(8, 8, 8);
+}
+
+.cuadrado {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.cuadrado.red {
+    background-color: red;
+}
+
+.cuadrado.green {
+    background-color: green;
+}
+
+.cuadrado.blue {
+    background-color: blue;
+}
+
+.cuadrado.yellow {
+    background-color: yellow;
+}
+
+.cuadrado.purple {
+    background-color: purple;
+}
+
+.borde-rectangular {
+    border: 2px solid black;
+}
+
+.redondos {
+    border-radius: 50%;
+}
+
+tr:nth-child(odd) {
+    background-color: #cec5c5;
+}
+
+tr:nth-child(even) {
+    background-color: #f0c4c4;
+}
+
+/* Estilos para las cuadrículas del Ejercicio 3 */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 50px); /* 5 columnas de 50px c/u */
+    grid-gap: 20px 50px; /* Espacio entre los divs */
+    background-color: lightgray; /* Color de fondo para el primer grupo */
+    padding: 10px; /* Espacio alrededor del contenedor de la cuadrícula */
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.purple {
+    background-color: purple;
+}
+
+/* b. Crear una nueva fila en la que los divs tengan los bordes rectangulares */
+.rectangular-border {
+    border: 3px solid;
+    border-radius: 0;
+}
+
+/* c. Crear una nueva fila en la que los divs sean redondos */
+.rounded {
+    border-radius: 50%; /*Borde la fila circular*/
+}
+
+.grid-container:last-child .square {
+    border-radius: 50%; /* Borde circular */
+}
+
+/* d. Añadir un color de fondo distinto a cada grupo de divs */
+.grid-container:nth-child(2) {
+    background-color: lightblue;
+}
+
+/* e. Modificar el puntero en cada uno de los divs */
+.square:hover {
+    cursor: pointer;
+}
+
+/* a. Añadir un borde de 3px a los divs, cada columna debe tener el borde del color de la columna anterior */
+.grid-container .square {
+    border: 3px solid;
+}
+
+/* b. El borde de cada columna debe ser distinto, continuo, a puntos, a rallas... */
+.grid-container .square:nth-child(1) {
+    border-style: solid;
+}
+
+.grid-container .square:nth-child(2) {
+    border-style: dotted;
+}
+
+.grid-container .square:nth-child(3) {
+    border-style: dashed;
+}
+
+.grid-container .square:nth-child(4) {
+    border-style: double;
+}
+
+.grid-container .square:nth-child(5) {
+    border-style: groove;
+}
+
+.empty-space {
+    height: 20px;
+    background-color: #cec5c5;
+}
