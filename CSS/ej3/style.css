@@ -77,3 +77,7 @@
 .grid-container .square:nth-child(5) {
     border-style: groove;
 }
+
+.grid-container:last-child .square {
+    border-radius: 50%; /* Hace que el borde sea circular */
+}
